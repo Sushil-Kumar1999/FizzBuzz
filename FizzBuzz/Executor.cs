@@ -1,16 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace FizzBuzz;
 
-namespace FizzBuzz
+public  class Executor
 {
-    public  class Executor
-    {
-        public void Execute()
-        {
+    private readonly IFactory _factory;
 
-        }
+    public Executor(IFactory factory)
+    {
+        _factory = factory;
+    }
+
+    public void Execute()
+    {
+        _factory.GetFlow().Run();
     }
 }
