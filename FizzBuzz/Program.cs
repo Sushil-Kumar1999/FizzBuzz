@@ -11,7 +11,7 @@ internal class Program
             .ConfigureServices(services => services.AddSingleton<Executor>())
             .ConfigureServices(Registrations.RegisterServices)
             .Build()
-            .Services.GetService<Executor>()
+            .Services.GetService<Executor>()!
             .Execute();
     }
 }
